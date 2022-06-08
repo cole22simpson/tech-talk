@@ -71,6 +71,7 @@ nav {
   padding: 8px;
   border-radius: 7px;
   width: 10%;
+  text-align: center;
 }
 
 .create-post:hover {
