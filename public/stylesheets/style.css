@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --mint: rgb(217, 234, 211);
+  --brown: rgb(35, 16, 16);
+}
+
+.main-title {
+  color: var(--brown);
+  background-color: var(--mint);
+  font-size: 48px;
+  font-weight: 900;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.main-title-container {
+  margin-left: 50px;
+}
+
+header {
+  background-color: var(--brown);
+  height: 15vh;
+}
+
+main {
+  position: absolute;
+  background-color: var(--mint);
+  height: 100%;
+  width: 100%;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--mint);
+  font-size: 24px;
+  margin-left: 50px;
+}
+
+nav {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.your-posts {
+  list-style: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 65vh;
+}
+
+.posts-title {
+  color: var(--brown);
+  font-size: 36px;
+  text-align: center;
+  margin: 20px auto;
+  font-weight:600;
+  border-bottom: solid 3px var(--brown);
+  width: 10%;
+}
+.create-post {
+  background-color: var(--brown);
+  text-decoration: none;
+  color: var(--mint);
+  font-size: 28px;
+  padding: 8px;
+  border-radius: 7px;
+  width: 10%;
+}
+
+.create-post:hover {
+  opacity: 0.7;
+}
+
+.post {
+  border: solid 3px var(--brown);
+  margin: 30px;
+}
+
+.post-list {
+  list-style: none;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--mint);
+  margin: auto;
+  padding: 7px;
+}
+
+.posted-by {
+  text-align: right;
+  color: var(--mint);
+  margin: auto;
+}
+
+.post-text {
+  font-size: 24px;
+  margin: auto;
+  padding: 7px;
+}
+
+.top-row {
+  background-color: var(--brown);
+}
+
+.my-post {
+  background-color: var(--brown);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.my-post:hover {
+  opacity: .7;
+}
+
+.my-post-title h4 {
+  font-weight: 600;
+  color: var(--mint);
+  margin: auto;
+  padding: auto;
+}
+
+.my-post-date {
+  font-size: 20px;
+  text-align: right;
+  color: var(--mint);
+}
+
+.no-posts {
+  text-align: center;
+  margin: 75px auto;
+}
+
+.signup {
+  border: solid 3px var(--brown);
+  padding: 0;
+  margin: 40px;
+}
+
+.signup-login-title {
+  background-color: var(--brown);
+  color: var(--mint);
+  font-size: 30px;
+  padding: 20px;
+}
+
+.instead {
+  text-decoration: none;
+  margin: 20px auto;
+  font-size: 18px;
+}
+
+.submit-button {
+  background-color: var(--brown);
+  color: var(--mint);
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 35px;
+}
+
+.signup-login-container {
+  padding: 30px;
+}
+
+.username {
+  font-size: 26px;
+}
+
+.password {
+  font-size: 26px;
+}
+
+.new-title {
+  font-size: 26px;
+}
+
+.new-content {
+  font-size: 26px;
+}
+
+.new-post-title {
+  background-color: var(--brown);
+  color: var(--mint);
+  font-size: 30px;
+  padding: 20px;
+}
+
+.new-post {
+  border: solid 3px var(--brown);
+  padding: 0;
+  margin: 40px;
+}

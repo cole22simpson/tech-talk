@@ -1,0 +1,32 @@
+{{!-- <section>
+  <h2>Create New Post</h2>
+
+  <form class="new-post-form">
+    <div>
+      <label for="post-title">Title</label>
+      <input type="text" id="post-title" name="post-title" />
+      <label for="post-text">Content</label>
+      <input type="text" id="post-text" name="post-text" />
+    </div>
+    <button type="submit" class="btn">Submit</button>
+  </form>
+</section> --}}
+
+<div class="dashboard container-fluid">
+  <h2 class="posts-title">Your Posts</h2>
+  {{#if posts.length}}
+    <ul class="your-posts">
+      {{#each posts as |post|}}
+      <li>
+        {{> my-post post}}
+        {{!-- <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a> --}}
+      </li>
+      {{/each}}
+    </ul>
+    {{else}}
+    <h3 class="no-posts">You have no posts yet.</h3>
+  {{/if}}
+  <div class="row justify-content-center">
+    <a href="/dashboard/new-post" class="create-post">+ New Post</a>
+  </div>
+</div>
