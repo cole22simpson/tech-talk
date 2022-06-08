@@ -1,0 +1,27 @@
+<div class="edit-container">
+<h2 class="signup-login-title">Edit Post</h2>
+  <form class="edit-post-form">
+    <div>
+      <input class="edit-post-title" name="edit-post-title" value="{{post.post_title}}" />
+      <br>
+      <input class="edit-post-text" name="edit-post-text" value="{{post.post_text}}" />
+    </div>
+    <button class="save submit-button" type="submit">Save post</button>
+    <button class="delete submit-button" type="button" class="delete-post-btn">Delete post</button>
+  </form>
+
+  <form class="comment-form">
+    <div>
+      <textarea placeholder="Add a comment..." class="edit-comment" name="comment-body"></textarea>
+    </div>
+
+    <div>
+      <button class="send-comment submit-button" type="submit">Send</button>
+    </div>
+    
+  </form>
+</div>
+
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/comment.js"></script>

@@ -41,9 +41,35 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/new-post', (req, res) => {
-
-  res.render('new-post');
+router.get('/edit/:id', withAuth, (req, res) => {
+  Post.findByPk(req.params.id, {
+    attributes: [
+      'id',
+      'post_title',
+      'post_text'
+    ]
+  })
+    .then(dbPostData => {
+      if (dbPostData) {
+        const post = dbPostData.get({ plain: true });
+        
+        res.render('edit-post', {
+          post,
+          loggedIn: true
+        });
+      } else {
+        res.status(404).end();
+      }
+    })
+    .catch(err => {
+      res.status(500).json(err);
+    });
 });
+
+router.get('/new-post', withAuth, (req, res) => {
+
+  res.render('new-post', {loggedIn: true});
+});
+
 
 module.exports = router;
