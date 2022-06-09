@@ -1,13 +1,15 @@
 <div class="container-fluid post">
-  <div class="row top-row">
-    <h4 class="col-6 title">
-      {{post_title}}
-    </h4>
-    <p class="col-6 posted-by">
-      Posted by {{user.username}} on {{format_date created_at}}
+  <a class="no-dec" href="/view/{{id}}">
+    <div class="row top-row">
+      <h4 class="col-6 title">
+        {{post_title}}
+      </h4>
+      <p class="col-6 posted-by">
+        Posted by {{user.username}} on {{format_date created_at}}
+      </p>
+    </div>
+    <p class="post-text">
+      {{post_text}}
     </p>
-  </div>
-  <p class="post-text">
-    {{post_text}}
-  </p>
+  </a>
 </div>

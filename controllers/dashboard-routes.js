@@ -47,6 +47,20 @@ router.get('/edit/:id', withAuth, (req, res) => {
       'id',
       'post_title',
       'post_text'
+    ],
+    include: [
+      {
+        model: Comment,
+        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+        include: {
+          model: User,
+          attributes: ['username']
+        }
+      },
+      {
+        model: User,
+        attributes: ['username']
+      }
     ]
   })
     .then(dbPostData => {

@@ -1,0 +1,20 @@
+<div class="post">
+  {{> post-info post}}
+  <div>
+    <h4 class="comments-title">Comments</h4>
+    {{> comments post.comments}}
+  </div>
+
+{{#if loggedIn}}
+<form class="view-comment-form">
+  <textarea class="edit-comment" placeholder="Add a comment..." name="comment-body"></textarea>
+  <br>
+  <button class="send-comment submit-button" type="submit">Send</button>
+</form>
+{{/if}}
+
+</div>
+
+{{#if loggedIn}}
+<script src="/javascript/view-comment.js"></script>
+{{/if}}
